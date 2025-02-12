@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1</title>
+</head>
+<body>
+    <h1>Minha primeira pagina de JS</h1>
+    <script>
+
+        //Alert - Chamo a atenção do meu usuário, OBRIGANDO-O A aceitar o que eu desejo! "OK"
+        //Boas Práticas, é interessante colocar o caminho do comando que deseja, porém 
+        //depois do ecma 18, não se faz obrigatório.
+        window.alert("Olá mundo, estou quebrando uma maldição!");
+        alert("Estava com saudades de vocês!")
+
+
+        //Prompt - é como o input do python, permite que meu usuário insira um valor
+        prompt("qual a sua meta para esse 2 semestre no senai? ")
+
+
+        //variaveis: let (valores flexiveis), const (valores fixos), var (a forma mais
+        //  antiga de declarar uma var)
+        let materiaFavorita = window.prompt("Qual a sua materia preferida")
+
+
+        //Confirm - Apresenta dois botões o de "OK" e o de "Cancelar"
+        confirm("Você adora JavaScript, né?")
+        
+
+        //escrever uma frase no corpo do HTML
+        document.write(`quer dizer que a sua matéria favorita é ${materiaFavorita}`)
+
+
+        /////Exercicio nota//////
+        let nota1 = Number(prompt("Informe a sua nota: "));
+        let nota2 = Number(prompt("Informe a sua nota: "));
+        let media = (nota1 + nota2)/2
+
+
+        //frases interpoladas entre textos e variaveis, necessitam de crase, e
+        //  para variavel ${}
+        alert(`A sua média é de ${media}`)
+
+
+        if(media >= 5){
+            alert(`Você está aprovado, meus parabens!`)
+        }else{
+            //para exibir mensagens '' ""
+            alert("Você foi promovido a ver esse termo mais uma vez para atingir sua excelencia, ficarei feliz em ve-lo novamente")
+        }
+
+
+        //laços de repetição for, while, do while
+        for(let i = 10; i > 0; i--){
+            console.log(i);
+            document.write(`<br>${i}`)
+        }
+        //while
+        contador = 100
+        while(contador > 0){
+            document.write(`Contador ${contador} <br> `)
+            contador = contador - 10
+        }
+
+        //do while: quando quero que uma instrução seja executada pelo menos uma vez
+        let a = 1;
+        do{
+            if(a % 2 == 0){
+                document.write(`O numero ${a} é par`)
+            }
+            else{
+                document.write(`O numero ${a} é impar`)
+            }
+            a++
+
+        }while(a <= 20)
+
+        //switch case: quando eu tenho multipla escolha
+        //pedir algo usuario, como as operaçoes e numeros
+        let operacoes = Number(prompt("escolha sua operação 1- soma 2- subtração 3- multiplicação 4- divisão"))
+        let numero1 = Number(prompt("informe um numero"))
+        let numero2 = Number(prompt("informe um numero"))
+
+        switch(operacoes){
+            case 1:
+                soma = numero1 + numero2
+                document.write(`a soma é ${soma}`)
+                break;
+            case 2:
+                subtracao = numero1 - numero2
+                document.write(`a subtracao é ${subtracao}`)
+                break;
+            case 3:
+                multiplicacao = numero1 * numero2
+                document.write(`A multiplicacao é ${multiplicacao}`)
+                break;
+            case 4:
+                divisao = numero1 / numero2
+                document.write(`a divisao é ${divisao}`)
+                break;
+            default:
+                document.write("opçao invalida!")
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
