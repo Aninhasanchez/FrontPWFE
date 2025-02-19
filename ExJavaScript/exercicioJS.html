@@ -63,8 +63,18 @@
 
 
 
-//6-)
+// //6-)
+// let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+// let nota2 = parseFloat(prompt("Digite a segunda nota:"));
 
+// let media = (nota1 + nota2) / 2;
+
+// let acimaDaMedia = media > 7 ? "acima da média" : "abaixo da média";
+
+// let nota1Par = (nota1 % 2 === 0) ? "par" : "ímpar";
+// let nota2Par = (nota2 % 2 === 0) ? "par" : "ímpar";
+
+// alert(`Média: ${media.toFixed(2)}\nA média está ${acimaDaMedia}.\nA primeira nota é ${nota1Par}.\nA segunda nota é ${nota2Par}.`);
 
 
 
@@ -78,22 +88,100 @@
 
 
 
+// //8-)
+// let ano = parseInt(prompt("Digite um ano:"));
+
+// function isBissexto(ano) {
+//     if ((ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0)) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// if (isBissexto(ano)) {
+//     alert(`${ano} é um ano bissexto.`);
+// } else {
+//     alert(`${ano} não é um ano bissexto.`);
+// }
 
 
 
-// 6) Solicite duas notas ao usuário e informe se está acima da média, e se é uma nota par, e mostre o resultado ao usuário.
+// //9-)
+// let taxaDeCambio = parseFloat(prompt("Digite a taxa de câmbio (ex: 5.25 para 1 USD = 5.25 BRL):"));
+// let valorDesejado = parseFloat(prompt("Digite o valor que você deseja converter:"));
 
-// 7) Solicite o peso e a altura de uma pessoa e calcule o IMC( peso/altura²). Apresente o resultado ao usuário. 
+// let valorConvertido = valorDesejado * taxaDeCambio;
+// alert(`O valor de R$${valorDesejado.toFixed(2)} convertido para a moeda desejada é R$${valorConvertido.toFixed(2)}.`);
 
-// 8) Verifique se um ano é bissexto.
 
-// // 9) Solicite ao usuário uma taxa de câmbio, e um valor desejado, exiba quanto ficaria esse valor convertido com a taxa. 
 
-// 10) Pedir um número ao usuário de 1 a 9, e imprima a tabuada desse valor.
+// //10-)
+// let numero = parseInt(prompt("Digite um número de 1 a 9 para ver sua tabuada:"));
 
-// 11) Neste exercício, você vai simular um jogo de "Pedra, papel e tesoura" contra o computador.  
+// if (numero >= 1 && numero <= 9) {
+//     let tabuada = "";
+//     for (let i = 1; i <= 10; i++) {
+//         tabuada += `${numero} x ${i} = ${numero * i}\n`;
+//     }
+//     alert(tabuada); 
+// } else {
+//     alert("Por favor, digite um número válido entre 1 e 9.");
+// }
 
-// 12) Neste exercício, você precisa criar um programa que calcula o fatorial de um número. O fatorial de um número é o produto de todos os números inteiros positivos de 1 até o número. Por exemplo, o fatorial de 5 (representado por 5!) é 1 * 2 * 3 * 4 * 5 = 120. 
+
+// //11-)
+// function escolherComputador() {
+//     const opcoes = ["pedra", "papel", "tesoura"];
+//     const indice = Math.floor(Math.random() * 3); // Gera um número aleatório de 0 a 2
+//     return opcoes[indice];
+// }
+// function jogar() {
+//     let escolhaUsuario = prompt("Escolha pedra, papel ou tesoura:");
+
+//     if (!["pedra", "papel", "tesoura"].includes(escolhaUsuario)) {
+//         alert("Escolha inválida! Por favor, digite pedra, papel ou tesoura.");
+//         return;
+//     }
+
+//     let escolhaComputador = escolherComputador();
+//     alert(`O computador escolheu: ${escolhaComputador}`);
+
+//     if (escolhaUsuario === escolhaComputador) {
+//         alert("Empate!");
+//     } else if (
+//         (escolhaUsuario === "pedra" && escolhaComputador === "tesoura") ||
+//         (escolhaUsuario === "papel" && escolhaComputador === "pedra") ||
+//         (escolhaUsuario === "tesoura" && escolhaComputador === "papel")
+//     ) {
+//         alert("Você venceu!");
+//     } else {
+//         alert("O computador venceu!");
+//     }
+// }
+// jogar();
+
+
+
+// // 12) 
+// function fatorial(n) {
+//     if (n === 0 || n === 1) {
+//         return 1;
+//     } else {
+//         let resultado = 1;
+//         for (let i = 2; i <= n; i++) {
+//             resultado *= i;
+//         }
+//         return resultado;
+//     }
+// }
+
+// let numero = 5;
+// console.log(`O fatorial de ${numero} é ${fatorial(numero)}`);
+
+
+
+
 
 
     </script>    

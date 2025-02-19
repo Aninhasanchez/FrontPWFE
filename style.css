@@ -1,0 +1,13 @@
+#MinhaDiv{
+    height: 200px;
+    width: 200px;
+    background-color: fuchsia;
+    margin: 20px;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: cyan;
+    margin: 20px;
+}
