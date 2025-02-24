@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio JS 2</title>
+</head>
+<body>
+    <script>
+//         //1-) Calculadora
+
+// const soma = (a, b) => a + b;
+// const subtracao = (a, b) => a - b;
+// const multiplicacao = (a, b) => a * b;
+// const divisao = (a, b) => b !== 0 ? a / b : 'Erro: Divisão por zero';
+
+// // Função principal para realizar a operação
+// const calculadora = (operacao, a, b) => {
+//   switch(operacao) {
+//     case 'soma':
+//       return soma(a, b);
+//     case 'subtracao':
+//       return subtracao(a, b);
+//     case 'multiplicacao':
+//       return multiplicacao(a, b);
+//     case 'divisao':
+//       return divisao(a, b);
+//     default:
+//       return 'Operação inválida';
+//   }
+// }
+// // // Exemplos de uso da calculadora
+// // console.log(calculadora('soma', 10, 5)); // 15
+// // console.log(calculadora('subtracao', 10, 5)); // 5
+// // console.log(calculadora('multiplicacao', 10, 5)); // 50
+// // console.log(calculadora('divisao', 10, 5)); // 2
+// // console.log(calculadora('divisao', 10, 0)); // Erro: Divisão por zero
+// // console.log(calculadora('modulo', 10, 5)); // Operação inválida
+
+
+// //2-) inverter string informada pelo usuario
+// const inverterString = (str) => str.split('').reverse().join('');
+
+// const input = prompt("Digite uma string para inverter:");
+// const resultado = inverterString(input);
+
+// alert("String invertida:", resultado);
+
+
+// //3-) nome e imprimir letra 
+// const imprimirLetras = (nome) => {
+//   for (let i = 0; i < nome.length; i++) {
+//     console.log(nome[i]);
+//   }
+// }
+// const nome = prompt("Digite seu nome:");
+// imprimirLetras(nome);
+
+
+// //4-) pedir idade e dizer se pode tirar carta de motorista
+// const podeTirarCNH = (idade) => {
+//   if (idade >= 18) {
+//     console.log("Você pode tirar a carteira de motorista.");
+//   } else {
+//     console.log("Você não pode tirar a carteira de motorista ainda.");
+//   }
+// }
+
+// const idade = parseInt(prompt("Qual é a sua idade?"));
+
+// if (!isNaN(idade)) {
+//   podeTirarCNH(idade);
+// } else {
+//   console.log("Por favor, insira uma idade válida.");
+// }
+
+
+// //5-) tres numeros e exiba em ordem crescente
+// const ordenarNumeros = (a, b, c) => {
+
+//   const numeros = [a, b, c];
+//   numeros.sort((x, y) => x - y); 
+//   return numeros;
+// }
+
+// const num1 = parseInt(prompt("Digite o primeiro número:"));
+// const num2 = parseInt(prompt("Digite o segundo número:"));
+// const num3 = parseInt(prompt("Digite o terceiro número:"));
+
+// if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
+//   const resultado = ordenarNumeros(num1, num2, num3);
+//   console.log("Os números em ordem crescente são:", resultado.join(', '));
+// } else {
+//   console.log("Por favor, insira números válidos.");
+// }
+
+
+// //6-)converte horas para minutos
+// const converterHorasParaMinutos = (horas) => {
+//   return horas * 60;
+// }
+
+// const horas = parseFloat(prompt("Digite a quantidade de horas:"));
+
+// if (!isNaN(horas)) {
+//   const minutos = converterHorasParaMinutos(horas);
+//   console.log(`${horas} hora(s) equivalem a ${minutos} minutos.`);
+// } else {
+//   console.log("Por favor, insira um valor válido para as horas.");
+// }
+
+
+// //7-) peça um valor e exiba quantas cédulas de R$200, R$100, R$50, R$20, R$10, R$5 e R$1 seriam necessárias para formar esse valor.
+// const calcularCedulas = (valor) => {
+//   const cedulas = [200, 100, 50, 20, 10, 5, 1];
+//   let resultado = {};
+
+//   cedulas.forEach(cedula => {
+//     resultado[`R$${cedula}`] = Math.floor(valor / cedula);
+//     valor = valor % cedula;
+//   });
+//   return resultado;
+// }
+
+// const valor = parseInt(prompt("Digite o valor que você deseja sacar: R$"));
+
+// if (!isNaN(valor) && valor > 0) {
+//   const cedulasNecessarias = calcularCedulas(valor);
+  
+//   for (const cedula in cedulasNecessarias) {
+//     if (cedulasNecessarias[cedula] > 0) {
+//       console.log(`${cedulasNecessarias[cedula]} cédulas de ${cedula}`);
+//     }
+//   }
+// } else {
+//   console.log("Por favor, insira um valor válido.");
+// }
+
+
+
+// //8-) peça um numero e exiba a raiz quadrada
+// const calcularRaizQuadrada = (numero) => {
+//   return Math.sqrt(numero);
+// }
+
+// const numero = parseFloat(prompt("Digite um número para calcular sua raiz quadrada:"));
+
+// if (!isNaN(numero) && numero >= 0) {
+//   const raizQuadrada = calcularRaizQuadrada(numero);
+//   console.log(`A raiz quadrada de ${numero} é ${raizQuadrada}`);
+// } else {
+//   console.log("Por favor, insira um número válido maior ou igual a zero.");
+// }
+
+
+
+// //9-)formulario cadastro
+// function validarFormulario() {
+//       const nome = document.getElementById("nome").value;
+//       const endereco = document.getElementById("endereco").value;
+//       const telefone = document.getElementById("telefone").value;
+//       const celular = document.getElementById("celular").value;
+//       const email = document.getElementById("email").value;
+      
+//       if (!nome) {
+//         alert("O campo Nome não pode estar vazio.");
+//         return false;
+//       }
+//       if (!endereco) {
+//         alert("O campo Endereço não pode estar vazio.");
+//         return false;
+//       }
+//       if (!telefone) {
+//         alert("O campo Telefone não pode estar vazio.");
+//         return false;
+//       }
+//       if (!celular) {
+//         alert("O campo Celular não pode estar vazio.");
+//         return false;
+//       }
+//       if (!email) {
+//         alert("O campo Email não pode estar vazio.");
+//         return false;
+//       }
+//       if (!document.querySelector('input[name="sexo"]:checked')) {
+//         alert("Por favor, selecione um sexo.");
+//         return false;
+//       }
+//       alert("Formulário enviado com sucesso!");
+//       return true;
+//     }
+
+
+// //10. Calcular Imposto de Renda (Faixas): Calcule o imposto de renda com base em faixas salariais com arrow function. 
+// const calcularImpostoRenda = (salario) => {
+//   let imposto = 0;
+
+//   if (salario <= 1903.98) {
+//     imposto = 0; // isento
+//   } else if (salario <= 2826.65) {
+//     imposto = (salario - 1903.98) * 0.075; // 7,5%
+//   } else if (salario <= 3751.05) {
+//     imposto = (salario - 2826.65) * 0.15 + 142.80; // 15%
+//   } else if (salario <= 4664.68) {
+//     imposto = (salario - 3751.05) * 0.225 + 354.80; // 22,5%
+//   } else {
+//     imposto = (salario - 4664.68) * 0.275 + 636.13; // 27,5%
+//   }
+//   return imposto.toFixed(2); 
+// }
+// const salario = parseFloat(prompt("Digite seu salário:"));
+ 
+// if (!isNaN(salario) && salario > 0) {
+//   const imposto = calcularImpostoRenda(salario);
+//   console.log(`O imposto de renda a ser pago é R$ ${imposto}`);
+// } else {
+//   console.log("Por favor, insira um salário válido.");
+// }
+
+
+
+// //11-)calcular inss
+// const calcularINSS = (salario) => {
+//   const aliquota = 0.11; // Alíquota de 11% (exemplo simplificado)
+//   return (salario * aliquota).toFixed(2); // Retorna o valor do INSS com 2 casas decimais
+// }
+
+// const salario = parseFloat(prompt("Digite seu salário:"));
+
+// if (!isNaN(salario) && salario > 0) {
+//   const inss = calcularINSS(salario);
+//   console.log(`O valor do INSS a ser pago é R$ ${inss}`);
+// } else {
+//   console.log("Por favor, insira um salário válido.");
+// }
+
+
+
+// //12-)calcular juros compostos
+// const calcularJurosCompostos = (capitalInicial, taxaJuros, periodo) => {
+//   const montante = capitalInicial * Math.pow((1 + (taxaJuros / 100)), periodo);
+//   return montante.toFixed(2); // Retorna o valor final com 2 casas decimais
+// }
+
+// const capitalInicial = parseFloat(prompt("Digite o valor do capital inicial:"));
+// const taxaJuros = parseFloat(prompt("Digite a taxa de juros (% ao ano ou mês):"));
+// const periodo = parseInt(prompt("Digite o número de períodos (meses ou anos):"));
+
+// if (!isNaN(capitalInicial) && !isNaN(taxaJuros) && !isNaN(periodo) && capitalInicial > 0 && taxaJuros > 0 && periodo > 0) {
+//   const montanteFinal = calcularJurosCompostos(capitalInicial, taxaJuros, periodo);
+//   console.log(`O valor final após os juros compostos será R$ ${montanteFinal}`);
+// } else {
+//   console.log("Por favor, insira valores válidos.");
+// }
+
+
+// //13-)simular financiamento
+// const calcularParcelas = (capital, taxaJuros, numParcelas) => {
+//   const i = taxaJuros / 100; // Convertendo a taxa de juros para decimal
+//   const parcela = (capital * i) / (1 - Math.pow(1 + i, -numParcelas));
+//   return parcela.toFixed(2); // Retorna o valor da parcela com 2 casas decimais
+// }
+
+// const capital = parseFloat(prompt("Digite o valor do financiamento:"));
+// const taxaJuros = parseFloat(prompt("Digite a taxa de juros mensal (%):"));
+// const numParcelas = parseInt(prompt("Digite o número de parcelas:"));
+
+// if (!isNaN(capital) && !isNaN(taxaJuros) && !isNaN(numParcelas) && capital > 0 && taxaJuros > 0 && numParcelas > 0) {
+//   const valorParcela = calcularParcelas(capital, taxaJuros, numParcelas);
+//   console.log(`O valor da parcela será R$ ${valorParcela}`);
+// } else {
+//   console.log("Por favor, insira valores válidos.");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
